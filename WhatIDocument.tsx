@@ -8,13 +8,12 @@ const AUDITX_URL = 'https://github.com/Gajamathi/AuditX-Dita-Project.git';
 const SMART_TV_URL = 'https://github.com/Gajamathi/Technicalwriting-_Portfolio_SmartTV_App.git';
 
 const auditSteps = [
-  'PRODUCT INFORMATION',
-  'ADMIN · SUPERVISOR · OPERATOR',
-  'REPORTS / TROUBLESHOOTING',
-  'GLOSSARY',
+  'Product Information',
+  'Administrator Guide · Supervisor Guide · Operator Guide',
+  'Reports · Troubleshooting · Glossary',
 ];
 
-const tvSteps = ['ABOUT', 'GETTING STARTED', 'USING SMART TV', 'TROUBLESHOOTING'];
+const tvSteps = ['About', 'Getting Started', 'Using SmartTV', 'Troubleshooting'];
 
 const WhatIDocument: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -60,30 +59,32 @@ const WhatIDocument: React.FC = () => {
         <div className="section-kicker">02 / SAMPLE DOCUMENTATION</div>
         <h2 id="work-heading" className="section-title">What I Document</h2>
         <p className="section-intro">
-          A selection of sample documentation projects that demonstrate how I structure content for different products, users, and documentation needs.
+          A selection of documentation samples that demonstrate how I structure content for different products, users, and documentation needs.
         </p>
 
         <article className="project-scene project-scene-interactive auditx-scene">
           <div className="project-intro project-sticky">
-            <p className="project-type">SAAS LOGISTICS PRODUCT</p>
-            <h3>AuditX</h3>
-            <p className="project-description">User and API documentation for a warehouse auditing and packaging solution.</p>
-            <p className="project-context">
-              AuditX is a SaaS logistics product that records and audits packaging in warehouses and stores the data directly against the customer order ID. It also sends notifications to the customer after successful packaging.
+            <p className="project-type">01 — AUDITX</p>
+            <h3>Structured Documentation</h3>
+            <p className="project-description">
+              A DITA-based documentation project for an audit and verification platform, structured around the needs of different user roles.
             </p>
             <div className="project-visual audit-visual" aria-hidden="true">
-              <span className="visual-order">ORDER ID</span>
+              <span className="visual-order">AUDIT &amp; VERIFICATION</span>
               <span className="visual-node node-one" />
               <span className="visual-node node-two" />
               <span className="visual-node node-three" />
               <span className="visual-line" />
             </div>
-            <div className="tool-row"><span>Oxygen XML</span><span>DITA XML</span><span>DITA Maps</span></div>
-            <a href={AUDITX_URL} target="_blank" rel="noopener noreferrer" className="text-link">View Project ↗</a>
+            <div className="project-meta">
+              <p><span>Tool</span>Oxygen XML Editor</p>
+              <p><span>Technology</span>DITA XML · DITA Maps</p>
+            </div>
+            <a href={AUDITX_URL} target="_blank" rel="noopener noreferrer" className="text-link">View Project →</a>
           </div>
 
           <div className="architecture-board interactive-board" aria-label="AuditX content architecture">
-            <p className="architecture-label">BUILDING THE CONTENT ARCHITECTURE</p>
+            <p className="architecture-label">CONTENT ARCHITECTURE</p>
             <div className="board-progress" aria-hidden="true">
               <span style={{ transform: `scaleY(${(auditActive + 1) / auditSteps.length})` }} />
             </div>
@@ -98,7 +99,7 @@ const WhatIDocument: React.FC = () => {
               >
                 <span className="architecture-index">0{index + 1}</span>
                 <strong>{item}</strong>
-                <span className="step-state">{index < auditActive ? 'Built' : index === auditActive ? 'Building' : 'Queued'}</span>
+                <span className="step-state">{index < auditActive ? 'Built' : index === auditActive ? 'Current' : 'Next'}</span>
               </button>
             ))}
           </div>
@@ -106,25 +107,31 @@ const WhatIDocument: React.FC = () => {
 
         <article className="project-scene project-scene-interactive smarttv-scene">
           <div className="project-intro project-intro-alt project-sticky">
-            <p className="project-type">CONSUMER PRODUCT</p>
-            <h3>Smart TV</h3>
-            <p className="project-description">User documentation for a smart TV platform, covering setup, features and troubleshooting.</p>
+            <p className="project-type">02 — SMARTTV MONITOR APP</p>
+            <h3>User Documentation</h3>
+            <p className="project-description">
+              User-focused documentation for a streaming application, covering onboarding, key features, and troubleshooting.
+            </p>
             <div className="project-visual tv-visual" aria-hidden="true">
               <div className="tv-screen">
                 <span className="tv-glow" />
-                <span className="tv-title">SMART TV</span>
+                <span className="tv-title">SMARTTV</span>
                 <span className="tv-bar one" />
                 <span className="tv-bar two" />
                 <span className="tv-bar three" />
               </div>
               <div className="tv-stand" />
             </div>
-            <div className="tool-row soft"><span>MadCap Flare</span><span>Snippets</span><span>Variables</span><span>Conditions</span></div>
-            <a href={SMART_TV_URL} target="_blank" rel="noopener noreferrer" className="text-link">View Project ↗</a>
+            <div className="project-meta">
+              <p><span>Tool</span>MadCap Flare</p>
+              <p><span>Features Used</span>Snippets · Variables</p>
+              <p><span>Output</span>HTML5</p>
+            </div>
+            <a href={SMART_TV_URL} target="_blank" rel="noopener noreferrer" className="text-link">View Project →</a>
           </div>
 
-          <div className="journey-board interactive-board" aria-label="Smart TV documentation journey">
-            <p className="architecture-label">MOVE THROUGH THE DOCUMENTATION</p>
+          <div className="journey-board interactive-board" aria-label="SmartTV content architecture">
+            <p className="architecture-label">CONTENT ARCHITECTURE</p>
             <div className="tv-progress" aria-hidden="true">
               <span style={{ width: `${((tvActive + 1) / tvSteps.length) * 100}%` }} />
             </div>
@@ -139,10 +146,9 @@ const WhatIDocument: React.FC = () => {
               >
                 <span>{String(index + 1).padStart(2, '0')}</span>
                 <strong>{item}</strong>
-                <em>{index === tvActive ? 'Current topic' : 'Open topic'}</em>
+                <em>{index === tvActive ? 'Current' : 'Topic'}</em>
               </button>
             ))}
-            <p className="journey-hint">Scroll or select a topic to move through the journey.</p>
           </div>
         </article>
       </div>

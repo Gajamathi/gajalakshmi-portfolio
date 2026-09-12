@@ -42,7 +42,6 @@ const ToolsAndTechnology: React.FC = () => {
   return (
     <section ref={ref} id="tools" className="tools scene" aria-labelledby="tools-heading">
       <div className="section-frame tools-frame">
-        <div className="section-kicker">03 / WORKFLOW</div>
         <h2 id="tools-heading" className="section-title">Tools &amp; Technologies</h2>
         <div className="tool-flow" aria-label="Documentation tools and technologies">
           <div className="tool-progress" aria-hidden="true">

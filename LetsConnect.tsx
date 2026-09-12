@@ -30,7 +30,6 @@ const LetsConnect: React.FC = () => {
   return (
     <section id="contact" className="connect scene" aria-labelledby="connect-heading">
       <div className="section-frame connect-frame">
-        <div className="section-kicker">05 / START A CONVERSATION</div>
         <h2 id="connect-heading" className="section-title">Let's Connect</h2>
         <div className="connect-copy">
           <p>Better documentation creates better user experiences. Better user experiences build lasting customer trust.</p>

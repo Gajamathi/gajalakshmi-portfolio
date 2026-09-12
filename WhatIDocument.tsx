@@ -56,7 +56,6 @@ const WhatIDocument: React.FC = () => {
   return (
     <section ref={sectionRef} id="work" className="work scene" aria-labelledby="work-heading">
       <div className="section-frame">
-        <div className="section-kicker">02 / SAMPLE DOCUMENTATION</div>
         <h2 id="work-heading" className="section-title">What I Document</h2>
         <p className="section-intro">
           A selection of documentation samples that demonstrate how I structure content for different products, users, and documentation needs.

@@ -20,13 +20,6 @@ const MyJourney: React.FC = () => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const ctx = gsap.context(() => {
-      gsap.from('.journey-entry', {
-        opacity: 0,
-        y: 32,
-        stagger: 0.12,
-        scrollTrigger: { trigger: ref.current, start: 'top 72%', once: true },
-      });
-
       const trigger = ScrollTrigger.create({
         trigger: '.timeline',
         start: 'top 65%',

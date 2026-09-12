@@ -37,7 +37,6 @@ const MyJourney: React.FC = () => {
   return (
     <section ref={ref} id="journey" className="journey scene" aria-labelledby="journey-heading">
       <div className="section-frame">
-        <div className="section-kicker">04 / PROFESSIONAL PROGRESSION</div>
         <h2 id="journey-heading" className="section-title">My Journey</h2>
         <p className="section-intro">A timeline of my professional journey and the experiences that shaped me.</p>
 

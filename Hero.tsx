@@ -1,8 +1,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import heroImage from './hero.png';
-
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero: React.FC = () => {
@@ -74,7 +72,10 @@ const Hero: React.FC = () => {
 
         <div ref={portraitRef} className="hero-portrait-wrap" aria-hidden="true">
           <div className="hero-line" />
-          <img src={heroImage} alt="" className="hero-portrait" />
+          <div className="hero-portrait hero-portrait-placeholder">
+            <span>PORTRAIT</span>
+            <small>IMAGE PLACEHOLDER</small>
+          </div>
           <span className="hero-caption">WRITING → STRUCTURE → DOCUMENTATION</span>
         </div>
       </div>

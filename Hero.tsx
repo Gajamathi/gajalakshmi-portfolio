@@ -52,12 +52,9 @@ const Hero: React.FC = () => {
 
           <div className="hero-statement">
             <p className="hero-headline">
-              I don’t just document what was built.
+              I don't just document what was built.
               <br />
-              I ask the right questions to build a better product.
-            </p>
-            <p className="hero-support">
-              Turning complex information into clear, structured and user-friendly documentation.
+              I ask the right questions to help build a better product.
             </p>
           </div>
 

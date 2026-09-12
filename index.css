@@ -462,3 +462,50 @@ body::selection {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* =========================================================
+   Option A — Editorial Technical Palette (Hero)
+   ========================================================= */
+.hero {
+  background: #F3F0E8;
+}
+.navigation {
+  background: rgba(243, 240, 232, .88);
+  border-bottom-color: rgba(31, 31, 31, .16);
+}
+.hero-name {
+  color: #161616;
+}
+.hero-headline {
+  color: #161616;
+}
+.hero-role,
+.hero-caption {
+  color: #C43D2F;
+}
+.hero-line {
+  background: #C43D2F;
+}
+.hero-support {
+  color: #6B6B6B;
+}
+.hero .button {
+  border-color: #1F1F1F;
+}
+.hero .button-primary {
+  background: #161616;
+  color: #F3F0E8;
+}
+.hero .button-primary:hover {
+  background: #C43D2F;
+  border-color: #C43D2F;
+}
+.hero .button-secondary {
+  color: #161616;
+  background: transparent;
+}
+.hero .button-secondary:hover {
+  background: #161616;
+  color: #F3F0E8;
+}

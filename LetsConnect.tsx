@@ -33,7 +33,7 @@ const LetsConnect: React.FC = () => {
         <div className="section-kicker">05 / START A CONVERSATION</div>
         <h2 id="connect-heading" className="section-title">Let's Connect</h2>
         <div className="connect-copy">
-          <p>Great documentation starts with understanding, and that's where every good conversation begins.</p>
+          <p>Better documentation creates better user experiences. Better user experiences build lasting customer trust.</p>
         </div>
 
         <div className="connect-layout">
@@ -48,7 +48,7 @@ const LetsConnect: React.FC = () => {
             </a>
             <a href="https://github.com/Gajamathi" target="_blank" rel="noopener noreferrer">
               <small>GitHub</small>
-              <span>github.com/Gajamathi</span>
+              <span>https://github.com/Gajamathi</span>
             </a>
           </div>
 

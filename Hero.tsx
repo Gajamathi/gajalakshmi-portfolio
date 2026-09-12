@@ -43,12 +43,12 @@ const Hero: React.FC = () => {
     <section ref={sectionRef} id="hero" className="hero scene" aria-labelledby="hero-name">
       <div className="hero-grid">
         <div className="hero-copy">
-          <p className="eyebrow">TECHNICAL WRITER</p>
           <h1 id="hero-name" ref={nameRef} className="hero-name">
             GAJALAKSHMI
             <br />
             MATHI
           </h1>
+          <p className="eyebrow hero-role">TECHNICAL WRITER</p>
 
           <div className="hero-statement">
             <p className="hero-headline">

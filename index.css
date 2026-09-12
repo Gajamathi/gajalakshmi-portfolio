@@ -367,3 +367,10 @@ body::selection {
   .project-scene::before { inset: 1rem -.75rem; }
   .hero-name { letter-spacing: -.07em; }
 }
+
+
+/* Establish a local stacking context for paper-sheet layers */
+.project-scene {
+  position: relative;
+  isolation: isolate;
+}

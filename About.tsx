@@ -23,7 +23,6 @@ const About: React.FC = () => {
   return (
     <section ref={sectionRef} id="about" className="about scene" aria-labelledby="about-heading">
       <div className="section-frame about-frame">
-        <div className="section-kicker about-reveal">01 / PERSONAL CONTEXT</div>
         <h2 id="about-heading" className="section-title about-reveal">About Me</h2>
 
         <blockquote className="about-quote about-reveal">
@@ -42,9 +41,6 @@ const About: React.FC = () => {
           </p>
         </div>
 
-        <div className="about-transition" aria-hidden="true">
-          <span>INK</span><i></i><span>LINE</span><i></i><span>STRUCTURE</span>
-        </div>
       </div>
     </section>
   );

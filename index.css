@@ -28,8 +28,8 @@ html { scroll-padding-top: 88px; }
 .nav-links a:hover::after, .nav-links a.is-active::after { transform:scaleX(1); }
 
 
-.project-scene-interactive { min-height:760px; align-items:start; }
-.project-sticky { position:sticky; top:110px; }
+.project-scene-interactive { min-height:auto; align-items:start; }
+.project-sticky { position:relative; top:auto; }
 .interactive-board { position:relative; min-height:430px; padding-left:2.25rem; }
 .architecture-step, .journey-step { width:100%; background:transparent; color:var(--ink); text-align:left; cursor:pointer; font:inherit; transition:transform .28s ease, color .28s ease, border-color .28s ease, background .28s ease; }
 .architecture-step:hover, .journey-step:hover { transform:translateX(8px); }
@@ -582,17 +582,24 @@ body::selection {
 
 /* About: tighter copy block and cleaner transition into work. */
 .about-frame {
-  max-width: 980px;
+  max-width: 1180px;
 }
 
 .about-quote {
-  max-width: 24ch;
-  margin-bottom: 2.5rem;
+  max-width: none;
+  width: 100%;
+  font-size: clamp(2.15rem, 4vw, 4.35rem);
+  line-height: 1.16;
+  letter-spacing: -.035em;
+  margin: 2rem 0 3.25rem;
 }
 
 .about-copy {
-  max-width: 860px;
-  gap: clamp(1.5rem, 4vw, 3rem);
+  max-width: 980px;
+  gap: 1.75rem;
+  font-size: clamp(1.05rem, 1.25vw, 1.22rem);
+  line-height: 1.78;
+  color: #C9C7C1;
 }
 
 .about-transition {
@@ -608,10 +615,11 @@ body::selection {
   gap: clamp(2.5rem, 7vw, 6.5rem);
   padding: clamp(4rem, 7vw, 6rem) 0;
   margin-top: clamp(3rem, 6vw, 5rem);
+  align-items: start;
 }
 
 .project-scene-interactive {
-  min-height: 650px;
+  min-height: auto;
 }
 
 .project-intro {
@@ -624,7 +632,7 @@ body::selection {
 
 .interactive-board {
   padding-left: 2rem;
-  padding-top: .5rem;
+  padding-top: 0;
 }
 
 /* Keep decorative visuals supportive rather than dominant. */
@@ -637,6 +645,7 @@ body::selection {
 .journey-board {
   max-width: 500px;
   justify-self: end;
+  align-self: start;
   width: 100%;
 }
 
@@ -1141,5 +1150,132 @@ body::selection {
     background:
       radial-gradient(circle at 70% 18%, rgba(77,135,168,.08), transparent 30%),
       var(--charcoal);
+  }
+}
+
+
+/* =========================================================
+   Layout stabilization and final visual refinements
+   ========================================================= */
+
+/* Keep section geometry independent of viewport height and scroll position. */
+.project-scene-interactive,
+.project-scene {
+  min-height: auto;
+  align-items: start;
+}
+
+.project-sticky {
+  position: relative;
+  top: auto;
+}
+
+.architecture-board,
+.journey-board {
+  align-self: start;
+}
+
+/* About Me: wide editorial quote with readable supporting narrative. */
+.about-frame {
+  width: min(1180px, calc(100% - 3rem));
+}
+
+.about-quote {
+  max-width: none;
+  width: 100%;
+  font-size: clamp(2.15rem, 4vw, 4.35rem);
+  line-height: 1.16;
+  margin-top: 1.5rem;
+  margin-bottom: 3.25rem;
+}
+
+.about-copy {
+  max-width: 980px;
+  font-size: clamp(1.05rem, 1.25vw, 1.22rem);
+  line-height: 1.78;
+  color: #C9C7C1;
+}
+
+.about-copy p + p {
+  margin-top: 1.35rem;
+}
+
+/* Hero portrait placeholder: reserved space for the final portrait image. */
+.hero-portrait-wrap {
+  min-height: 520px;
+  align-self: center;
+}
+
+.hero-portrait-placeholder {
+  width: min(100%, 390px);
+  aspect-ratio: 4 / 5;
+  display: grid;
+  place-content: center;
+  gap: .65rem;
+  text-align: center;
+  border: 1px dashed rgba(243,239,231,.34);
+  background:
+    linear-gradient(145deg, rgba(77,135,168,.12), transparent 52%),
+    linear-gradient(315deg, rgba(241,184,74,.08), transparent 48%),
+    rgba(255,255,255,.018);
+  mix-blend-mode: normal;
+  opacity: 1;
+}
+
+.hero-portrait-placeholder::before {
+  content: "";
+  width: 78px;
+  height: 78px;
+  border: 1px solid rgba(241,184,74,.58);
+  border-radius: 50%;
+  justify-self: center;
+  margin-bottom: .4rem;
+}
+
+.hero-portrait-placeholder span {
+  color: var(--ivory);
+  font-family: "DM Sans", sans-serif;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+}
+
+.hero-portrait-placeholder small {
+  color: var(--stone);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+}
+
+/* Prevent oversized desktop whitespace and clipping between major sections. */
+.tool-flow {
+  margin-top: 3rem;
+}
+
+.tool-node:first-child {
+  padding-top: 1rem;
+}
+
+@media (max-width: 820px) {
+  .about-frame {
+    width: min(100% - 1.5rem, 1180px);
+  }
+
+  .about-quote {
+    font-size: clamp(2rem, 8.8vw, 3rem);
+    line-height: 1.2;
+  }
+
+  .about-copy {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .hero-portrait-wrap {
+    min-height: 360px;
+  }
+
+  .hero-portrait-placeholder {
+    width: min(100%, 300px);
   }
 }

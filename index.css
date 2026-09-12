@@ -746,3 +746,400 @@ body::selection {
     margin-top: 2rem;
   }
 }
+
+
+
+/* =========================================================
+   OPTION 2 — CHARCOAL + GOLDEN SHOWMAN
+   Complete site palette
+   ========================================================= */
+:root {
+  --charcoal: #17191C;
+  --charcoal-soft: #202327;
+  --charcoal-deep: #101214;
+  --gold: #F1B84A;
+  --gold-soft: #F7D27A;
+  --celestial: #4D87A8;
+  --celestial-soft: #7BA5BC;
+  --meadow: #508660;
+  --ivory: #F3EFE7;
+  --stone: #A9A69F;
+  --line-dark: rgba(243,239,231,.14);
+  --line-gold: rgba(241,184,74,.42);
+
+  --paper: var(--charcoal);
+  --paper-deep: var(--charcoal-deep);
+  --paper-light: var(--charcoal-soft);
+  --ink: var(--ivory);
+  --maroon: var(--gold);
+  --muted: var(--stone);
+  --soft-line: var(--line-dark);
+  --line: var(--line-dark);
+  --alabaster: var(--charcoal);
+  --tan: var(--stone);
+  --blue: var(--celestial);
+  color: var(--ivory);
+  background: var(--charcoal);
+}
+
+html,
+body {
+  background: var(--charcoal);
+  color: var(--ivory);
+}
+
+body {
+  background:
+    radial-gradient(circle at 18% 12%, rgba(77,135,168,.055), transparent 24%),
+    radial-gradient(circle at 82% 72%, rgba(241,184,74,.035), transparent 28%),
+    linear-gradient(180deg, #1A1C20 0%, #17191C 52%, #141619 100%);
+}
+
+body::selection {
+  background: rgba(241,184,74,.26);
+  color: var(--ivory);
+}
+
+/* Typography and navigation */
+.hero-name,
+.section-title,
+.project-intro h3,
+.journey-role h3,
+.tool-content h3,
+.tool-content strong,
+.about-quote,
+.hero-headline {
+  color: var(--ivory);
+}
+
+.section-intro,
+.hero-support,
+.project-context,
+.about-copy,
+.connect-copy,
+.architecture-label,
+.journey-detail b {
+  color: var(--stone);
+}
+
+.navigation {
+  background: rgba(23,25,28,.90);
+  border-bottom-color: var(--line-dark);
+  box-shadow: 0 1px 0 rgba(255,255,255,.02);
+}
+
+.mobile-menu {
+  background: var(--charcoal);
+  border-bottom-color: var(--line-dark);
+}
+
+.nav-links a,
+.nav-resume,
+.nav-toggle {
+  color: var(--ivory);
+}
+
+.nav-links a:hover,
+.nav-resume:hover {
+  color: var(--gold);
+}
+
+.nav-links a::after {
+  background: var(--gold);
+}
+
+/* Gold replaces the previous red accent throughout */
+.section-kicker,
+.eyebrow,
+.project-type,
+.hero-role,
+.hero-caption,
+.architecture-index,
+.tool-number,
+.journey-date,
+.about-transition,
+.contact-links small,
+.text-link,
+.form-status,
+.tool-heading-row small {
+  color: var(--gold);
+}
+
+.hero-line,
+.about-transition i,
+.board-progress span,
+.tv-progress span,
+.tool-progress span,
+.timeline-progress span,
+.flow-connector {
+  background: var(--gold);
+}
+
+.ink-mark {
+  stroke: var(--celestial);
+  opacity: .18;
+}
+
+/* Hero */
+.hero {
+  background:
+    radial-gradient(circle at 78% 35%, rgba(77,135,168,.08), transparent 30%),
+    linear-gradient(135deg, #1C1F23 0%, #17191C 55%, #131518 100%);
+  color: var(--ivory);
+}
+
+.hero-name,
+.hero-headline {
+  color: var(--ivory);
+}
+
+.hero-role,
+.hero-caption {
+  color: var(--gold);
+}
+
+.hero-support {
+  color: #B6B4AE;
+}
+
+.hero-line {
+  background: var(--gold);
+}
+
+.hero-portrait {
+  mix-blend-mode: screen;
+  opacity: .92;
+}
+
+.hero .button {
+  border-color: rgba(243,239,231,.48);
+}
+
+.hero .button-primary {
+  background: var(--gold);
+  color: var(--charcoal-deep);
+  border-color: var(--gold);
+}
+
+.hero .button-primary:hover {
+  background: var(--gold-soft);
+  border-color: var(--gold-soft);
+  color: var(--charcoal-deep);
+}
+
+.hero .button-secondary {
+  color: var(--ivory);
+  background: transparent;
+}
+
+.hero .button-secondary:hover {
+  background: var(--ivory);
+  color: var(--charcoal-deep);
+  border-color: var(--ivory);
+}
+
+/* Buttons, cards, borders */
+.button {
+  border-color: rgba(243,239,231,.42);
+}
+
+.button-primary {
+  background: var(--gold);
+  color: var(--charcoal-deep);
+  border-color: var(--gold);
+}
+
+.button-primary:hover {
+  background: var(--gold-soft);
+  border-color: var(--gold-soft);
+}
+
+.button-secondary {
+  color: var(--ivory);
+  border-color: rgba(243,239,231,.42);
+}
+
+.button-secondary:hover {
+  background: var(--ivory);
+  color: var(--charcoal-deep);
+  border-color: var(--ivory);
+}
+
+.project-scene {
+  border-color: var(--line-dark);
+}
+
+.project-scene::before {
+  background:
+    linear-gradient(145deg, rgba(77,135,168,.055), rgba(23,25,28,.12)),
+    rgba(32,35,39,.28);
+  border-color: rgba(243,239,231,.06);
+}
+
+.project-visual {
+  background:
+    linear-gradient(135deg, rgba(77,135,168,.08), rgba(23,25,28,.2)),
+    var(--charcoal-soft);
+  border-color: var(--line-dark);
+  box-shadow: 8px 10px 0 rgba(0,0,0,.10);
+}
+
+.tool-row span,
+.tool-list span {
+  background: rgba(255,255,255,.025);
+  border-color: rgba(243,239,231,.16);
+  color: var(--ivory);
+}
+
+.soft span {
+  background: rgba(77,135,168,.09);
+}
+
+.architecture-step,
+.journey-step,
+.tool-node {
+  color: var(--ivory);
+  border-color: var(--line-dark);
+}
+
+.architecture-step.is-active,
+.journey-step.is-active {
+  color: var(--gold);
+  background: rgba(241,184,74,.07);
+}
+
+.architecture-step.is-active {
+  border-color: var(--line-gold);
+}
+
+.tool-node.is-active .tool-content strong,
+.tool-node.is-active .tool-content h3,
+.journey-entry.is-active .journey-role h3 {
+  color: var(--gold);
+}
+
+.journey-step span,
+.architecture-index {
+  color: var(--gold);
+}
+
+.timeline-marker span {
+  background: var(--gold);
+  border-color: var(--charcoal);
+  box-shadow: 0 0 0 1px var(--gold);
+}
+
+.journey-entry.is-active .timeline-marker span {
+  background: var(--gold);
+}
+
+/* Interactive visuals */
+.project-visual {
+  color: var(--ivory);
+}
+
+.audit-visual .visual-order {
+  color: var(--gold);
+}
+
+.visual-node {
+  border-color: var(--gold);
+  background: var(--charcoal);
+}
+
+.visual-line {
+  background: var(--celestial);
+}
+
+.tv-visual {
+  background: rgba(77,135,168,.035);
+}
+
+.tv-screen,
+.tv-screen::after,
+.tv-stand {
+  background: var(--charcoal-deep);
+  border-color: var(--ivory);
+}
+
+.tv-screen {
+  border-color: var(--ivory);
+  box-shadow: 12px 14px 0 rgba(241,184,74,.09);
+}
+
+.tv-glow {
+  background:
+    radial-gradient(circle at 25% 35%, rgba(77,135,168,.72), transparent 42%),
+    radial-gradient(circle at 80% 70%, rgba(241,184,74,.38), transparent 36%);
+}
+
+.tv-title {
+  color: var(--gold);
+}
+
+.tv-bar {
+  background: rgba(243,239,231,.68);
+}
+
+@keyframes pulse-node {
+  50% {
+    transform: scale(1.35);
+    box-shadow: 0 0 0 8px rgba(241,184,74,.08);
+  }
+}
+
+/* Contact */
+.connect-layout .contact-links a,
+.connect-layout .contact-form {
+  background: rgba(255,255,255,.025);
+  border-color: var(--line-dark);
+}
+
+.connect-layout .contact-links a:hover {
+  border-color: var(--gold);
+  background: rgba(241,184,74,.035);
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255,255,255,.025);
+  border-color: rgba(243,239,231,.18);
+  color: var(--ivory);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #858782;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(241,184,74,.08);
+}
+
+/* Footer */
+.footer {
+  background: var(--charcoal-deep);
+  color: var(--ivory);
+  border-top-color: var(--line-dark);
+}
+
+.footer p {
+  color: rgba(243,239,231,.62);
+}
+
+/* Preserve contrast on all secondary text */
+.project-description,
+.journey-role > p,
+.contact-links span {
+  color: var(--ivory);
+}
+
+@media (max-width: 820px) {
+  .hero {
+    background:
+      radial-gradient(circle at 70% 18%, rgba(77,135,168,.08), transparent 30%),
+      var(--charcoal);
+  }
+}

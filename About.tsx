@@ -20,21 +20,16 @@ const About: React.FC = () => {
 
       gsap.fromTo(
         quoteRef.current,
+        { opacity: 0.18, y: 24 },
         {
-          clipPath: 'inset(0 100% 0 0)',
-          opacity: 0.25,
-          y: 18,
-        },
-        {
-          clipPath: 'inset(0 0% 0 0)',
           opacity: 1,
           y: 0,
-          ease: 'none',
+          ease: 'power2.out',
           scrollTrigger: {
             trigger: quoteRef.current,
-            start: 'top 88%',
-            end: 'bottom 42%',
-            scrub: 0.5,
+            start: 'top 82%',
+            end: 'top 42%',
+            scrub: 0.45,
           },
         },
       );

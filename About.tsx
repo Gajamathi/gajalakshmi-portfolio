@@ -6,16 +6,38 @@ gsap.registerPlugin(ScrollTrigger);
 
 const About: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const quoteRef = useRef<HTMLQuoteElement>(null);
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const ctx = gsap.context(() => {
       gsap.from('.about-reveal', {
-        y: 28,
+        y: 24,
         opacity: 0,
-        stagger: 0.14,
+        stagger: 0.12,
         scrollTrigger: { trigger: sectionRef.current, start: 'top 72%', once: true },
       });
+
+      gsap.fromTo(
+        quoteRef.current,
+        {
+          clipPath: 'inset(0 100% 0 0)',
+          opacity: 0.25,
+          y: 18,
+        },
+        {
+          clipPath: 'inset(0 0% 0 0)',
+          opacity: 1,
+          y: 0,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: quoteRef.current,
+            start: 'top 88%',
+            end: 'bottom 42%',
+            scrub: 0.5,
+          },
+        },
+      );
     }, sectionRef);
     return () => ctx.revert();
   }, []);
@@ -25,7 +47,7 @@ const About: React.FC = () => {
       <div className="section-frame about-frame">
         <h2 id="about-heading" className="section-title about-reveal">About Me</h2>
 
-        <blockquote className="about-quote about-reveal">
+        <blockquote ref={quoteRef} className="about-quote">
           "I wrote for fun in my teens and discovered in my twenties that it was a skill worth building a career on. My teenage self wrote poems about trees; today, I'm building structured documentation. Turns out, whether it's a poem or a product, I'm still trying to help someone make sense of what's in front of them."
         </blockquote>
 

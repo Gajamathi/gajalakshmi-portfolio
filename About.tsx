@@ -44,7 +44,7 @@ const About: React.FC = () => {
 
         <blockquote ref={quoteRef} className="about-quote">
           <span className="quote-line">"I wrote for fun in my teens and discovered in my twenties</span>
-          <span className="quote-line">that it was a skill worth building a career on.</span>
+          <span className="quote-line">&nbsp;that it was a skill worth building a career on.</span>
           <span className="quote-line">My teenage self wrote poems about trees; today, I'm building structured documentation.</span>
           <span className="quote-line">Turns out, whether it's a poem or a product, I'm still trying to help someone make sense of what's in front of them."</span>
         </blockquote>

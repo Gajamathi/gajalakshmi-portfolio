@@ -1143,3 +1143,41 @@ body::selection {
       var(--charcoal);
   }
 }
+
+
+/* Layout refinement — preserve existing content, improve hierarchy */
+.about{padding-top:clamp(4.5rem,7vw,6.5rem);padding-bottom:clamp(2rem,4vw,3.5rem)}
+.about-frame{max-width:1280px}
+.about .section-title{max-width:none;margin-bottom:1.5rem}
+.about-quote{max-width:none;width:100%;font-size:clamp(2.1rem,4.1vw,4.65rem);line-height:1.08;letter-spacing:-.04em;margin:0 0 3rem;color:var(--ivory);will-change:clip-path,opacity,transform}
+.about-copy{max-width:980px;font-size:clamp(1.05rem,1.25vw,1.18rem);line-height:1.8;color:#C8C5BF;opacity:1}
+.about-copy p+p{margin-top:1.35rem}
+
+.work{padding-top:clamp(2.5rem,5vw,4.5rem)}
+.work .section-title{max-width:none;white-space:nowrap}
+.work .section-intro{max-width:760px;color:#C8C5BF;font-size:clamp(1.05rem,1.2vw,1.16rem);line-height:1.75;opacity:1}
+
+.project-scene{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(2rem,5vw,5rem);padding:clamp(3.5rem,5vw,4.75rem) 0;margin-top:clamp(2.5rem,4vw,3.5rem)}
+.project-scene-interactive{min-height:auto;align-items:center}
+.project-intro{max-width:none}
+.project-intro h3{max-width:8.5ch;font-size:clamp(3.1rem,5.4vw,5.65rem);line-height:.9;margin:.6rem 0 1.35rem}
+.project-description{max-width:34ch}
+.project-sticky{top:96px}
+.architecture-board,.journey-board{align-self:center;max-width:none}
+.interactive-board{min-height:auto;padding-top:1.25rem}
+.architecture-label{margin-bottom:1.25rem}
+.architecture-step,.journey-step{min-height:74px}
+.project-meta p,.project-meta span,.architecture-label{opacity:1}
+.project-meta p{color:#D0CDC6}
+
+@media(max-width:820px){
+  .about{padding-top:4rem;padding-bottom:2.5rem}
+  .about-quote{font-size:clamp(2rem,9vw,3.25rem);line-height:1.13;margin-bottom:2.25rem}
+  .about-copy{font-size:1rem}
+  .work{padding-top:2.5rem}
+  .work .section-title{white-space:normal}
+  .project-scene{grid-template-columns:1fr;gap:2.25rem;padding:3.25rem 0}
+  .project-intro h3{max-width:none;font-size:clamp(3rem,13vw,4.8rem)}
+  .project-sticky{position:relative;top:auto}
+  .interactive-board{padding-top:0}
+}

@@ -62,7 +62,7 @@ const About: React.FC = () => {
               That experience shaped how I approach technical writing. Good documentation requires more than knowing how to explain a product. <strong>It requires understanding the product well enough to question it.</strong>
             </p>
             <p>
-              I’ve since consolidated legacy documentation across three products, using single-sourcing to make updates faster and onboarding clearer. I also work with developers to document APIs in formats that make sense for the people using them—not simply document what already exists.
+              I’ve since consolidated legacy documentation across three products, using single-sourcing to make updates faster and onboarding clearer. I also work with developers to document APIs in formats that make sense for the people using them, not simply document what already exists.
             </p>
             <p>
               This site reflects that same instinct through the projects, tools, and process behind my work.
@@ -71,7 +71,7 @@ const About: React.FC = () => {
 
           <aside className="about-result" aria-label="Results from vAudit documentation work">
             <span className="about-result-label">The Result</span>
-            <strong>Fewer docs to maintain.<br />Reduced cloud overhead.<br />A clearer product.</strong>
+            <strong>Fewer docs to maintain.</br>Reduced cloud overhead.</br> A clearer product.</strong>
           </aside>
         </div>
       </div>

@@ -56,9 +56,25 @@ const MyJourney: React.FC = () => {
               <div className="journey-role">
                 <h3>{entry.role}</h3>
                 <p>{entry.company}</p>
-                {entry.products && <div className="journey-detail"><b>Products</b><span>{entry.products.join(' · ')}</span></div>}
-                <div className="journey-detail"><b>Skills</b><span>{entry.skills.join(' · ')}</span></div>
-                {entry.clients && <div className="journey-detail"><b>Clients</b><span>{entry.clients.join(' · ')}</span></div>}
+
+                {entry.products && (
+                  <div className="journey-detail" style={{ display: 'block' }}>
+                    <b style={{ display: 'block' }}>Products</b>
+                    <span style={{ display: 'block' }}>{entry.products.join(' · ')}</span>
+                  </div>
+                )}
+
+                <div className="journey-detail" style={{ display: 'block' }}>
+                  <b style={{ display: 'block' }}>Skills</b>
+                  <span style={{ display: 'block' }}>{entry.skills.join(' · ')}</span>
+                </div>
+
+                {entry.clients && (
+                  <div className="journey-detail" style={{ display: 'block' }}>
+                    <b style={{ display: 'block' }}>Clients</b>
+                    <span style={{ display: 'block' }}>{entry.clients.join(' · ')}</span>
+                  </div>
+                )}
               </div>
             </article>
           ))}

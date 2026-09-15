@@ -552,12 +552,15 @@ body::selection {
   margin-top: 2rem;
 }
 
+
 .hero-portrait-wrap {
   min-height: 500px;
   justify-self: end;
   width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
-
 .hero-portrait {
   width: min(100%, 390px);
 }

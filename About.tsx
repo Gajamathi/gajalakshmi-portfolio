@@ -71,7 +71,7 @@ const About: React.FC = () => {
 
           <aside className="about-result" aria-label="Results from vAudit documentation work">
             <span className="about-result-label">The Result</span>
-            <strong>Fewer docs to maintain.</br>Reduced cloud overhead.</br> A clearer product.</strong>
+            <strong>Fewer docs to maintain.<br />Reduced cloud overhead.<br />A clearer product.</strong>
           </aside>
         </div>
       </div>

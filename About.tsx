@@ -62,7 +62,7 @@ const About: React.FC = () => {
               That experience shaped how I approach technical writing. Good documentation requires more than knowing how to explain a product. <strong>It requires understanding the product well enough to question it.</strong>
             </p>
             <p>
-              I’ve since consolidated legacy documentation across three products, using single-sourcing to make updates faster and onboarding clearer. I also work with developers to document APIs in formats that make sense for the people using them, not simply document what already exists.
+              I’ve since consolidated legacy documentation across three products, using single-sourcing to make updates faster and onboarding clearer. <strong>I document REST APIs and release notes, working with developers to make technical information clear and useful for the people using it, not simply documenting what already exists.</strong>
             </p>
             <p>
               This site reflects that same instinct through the projects, tools, and process behind my work.

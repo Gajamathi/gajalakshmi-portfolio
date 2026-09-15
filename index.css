@@ -1223,4 +1223,66 @@ body::selection {
   .about-quote .quote-line + .quote-line {
     margin-top: .22em;
   }
+} 
+/* =========================================================
+   Section rhythm refinement
+   Spacing only — no content, typography, or hierarchy changes
+   ========================================================= */
+
+.tools {
+  padding-top: clamp(2.5rem, 4vw, 4rem);
+  padding-bottom: clamp(2.5rem, 4vw, 4rem);
+}
+
+.tools .section-title {
+  white-space: nowrap;
+  max-width: none;
+}
+
+.tool-flow {
+  margin-top: 2.25rem;
+}
+
+.tool-node {
+  padding: 1.25rem 0;
+}
+
+.journey {
+  padding-top: clamp(2.5rem, 4vw, 4rem);
+  padding-bottom: clamp(2.5rem, 4vw, 4rem);
+}
+
+.timeline {
+  margin-top: 2.25rem;
+}
+
+.journey-entry {
+  padding-bottom: 2rem;
+}
+
+.connect {
+  padding-top: clamp(2.5rem, 4vw, 4rem);
+  padding-bottom: clamp(2.5rem, 4vw, 4rem);
+}
+
+@media (max-width: 820px) {
+  .tools .section-title {
+    white-space: normal;
+  }
+
+  .tool-flow {
+    margin-top: 1.75rem;
+  }
+
+  .tool-node {
+    padding: 1rem 0;
+  }
+
+  .timeline {
+    margin-top: 2rem;
+  }
+
+  .journey-entry {
+    padding-bottom: 1.75rem;
+  }
 }

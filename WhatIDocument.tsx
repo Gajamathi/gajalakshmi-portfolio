@@ -64,7 +64,7 @@ const WhatIDocument: React.FC = () => {
         <article className="project-scene project-scene-interactive auditx-scene">
           <div className="project-intro project-sticky">
             <p className="project-type">01 — AUDITX</p>
-            <h3>Structured Documentation</h3>
+            <h3>Logistics Packaging &amp; Audit Platform</h3>
             <p className="project-description">
               A DITA-based documentation project for an audit and verification platform, structured around the needs of different user roles.
             </p>
@@ -107,7 +107,7 @@ const WhatIDocument: React.FC = () => {
         <article className="project-scene project-scene-interactive smarttv-scene">
           <div className="project-intro project-intro-alt project-sticky">
             <p className="project-type">02 — SMARTTV MONITOR APP</p>
-            <h3>User Documentation</h3>
+            <h3>Smart TV Monitoring Application</h3>
             <p className="project-description">
               User-focused documentation for a streaming application, covering onboarding, key features, and troubleshooting.
             </p>

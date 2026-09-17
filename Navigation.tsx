@@ -40,7 +40,13 @@ const Navigation: React.FC = () => {
         {links.map(([label, href]) => (
           <a key={label} href={href} className={active === href ? 'is-active' : ''}>{label}</a>
         ))}
-        <button type="button" className="nav-resume" title="Resume link will be added soon">Download Resume</button>
+        <a
+          href="/Gajalakshmi_Mathi_Technical_Writer_Resume.pdf"
+          download="Gajalakshmi_Mathi_Technical_Writer_Resume.pdf"
+          className="nav-resume"
+        >
+          Download Resume
+        </a>
       </div>
 
       <button
@@ -58,7 +64,14 @@ const Navigation: React.FC = () => {
           {links.map(([label, href]) => (
             <a key={label} href={href} onClick={() => setOpen(false)}>{label}</a>
           ))}
-          <button type="button" className="nav-resume" title="Resume link will be added soon">Download Resume</button>
+          <a
+            href="/Gajalakshmi_Mathi_Technical_Writer_Resume.pdf"
+            download="Gajalakshmi_Mathi_Technical_Writer_Resume.pdf"
+            className="nav-resume"
+            onClick={() => setOpen(false)}
+          >
+            Download Resume
+          </a>
         </div>
       )}
     </nav>

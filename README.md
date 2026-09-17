@@ -203,9 +203,9 @@ It combines practical documentation samples with an understanding of:
 
 Technical Writer | Product Documentation | Structured Authoring
 
-📧 Email: [your email]
+📧 Email: mathigajalakshmi@gmail.com
 
-🔗 LinkedIn: [your LinkedIn]
+🔗 LinkedIn:www.linkedin.com/in/gajalakshmimathi
 
 ---
 

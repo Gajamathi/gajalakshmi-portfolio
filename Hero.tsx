@@ -62,19 +62,18 @@ const Hero: React.FC = () => {
             <a className="button button-primary" href="#work">
               View My Work
             </a>
-            <button
+            <a
               className="button button-secondary"
-              type="button"
-              title="Resume link will be added soon"
+              href="/Gajalakshmi_Mathi_Technical_Writer_Resume.pdf"
+              download="Gajalakshmi_Mathi_Technical_Writer_Resume.pdf"
             >
               Download Resume
-            </button>
+            </a>
           </div>
         </div>
 
         <div ref={portraitRef} className="hero-portrait-wrap" aria-hidden="true">
-     <img src={heroImage} alt="" className="hero-portrait" />
-        
+          <img src={heroImage} alt="" className="hero-portrait" />
         </div>
       </div>
     </section>

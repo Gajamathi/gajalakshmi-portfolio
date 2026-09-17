@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import heroImage from './profile.png';
+import GirlCharacter from './GirlCharacter';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -76,6 +77,8 @@ const Hero: React.FC = () => {
           <img src={heroImage} alt="" className="hero-portrait" />
         </div>
       </div>
+
+      <GirlCharacter />
     </section>
   );
 };

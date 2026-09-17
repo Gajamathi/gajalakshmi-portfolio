@@ -1,0 +1,36 @@
+.girl-character {
+  position: absolute;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  width: auto;
+  height: 40px;
+  z-index: 4;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.girl-character-image {
+  display: block;
+  width: auto;
+  height: 40px;
+  max-width: none;
+  user-select: none;
+}
+
+@media (max-width: 820px) {
+  .girl-character {
+    left: 1rem;
+    bottom: 1rem;
+    height: 38px;
+  }
+
+  .girl-character-image {
+    height: 38px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .girl-character {
+    display: none;
+  }
+}
